@@ -10,6 +10,6 @@ const open = ref<boolean>()
       mx-auto max-w-250
       :win="open"
     />
-    <CodeInput px-10 @check="isValid => open = isValid" />
+    <PassKey px-10 @check="isValid => open = isValid" />
   </div>
 </template>
