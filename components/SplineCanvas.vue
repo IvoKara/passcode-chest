@@ -10,7 +10,7 @@ const props = withDefaults(defineProps<{
   win: false,
 })
 
-const breakpoints = useBreakpoints(breakpointsTailwind)
+// const breakpoints = useBreakpoints(breakpointsTailwind)
 
 const canvas = ref<HTMLCanvasElement | null>()
 
@@ -22,8 +22,8 @@ onMounted(async () => {
   await app.load(props.url)
   loaded.value = true
 
-  if (breakpoints.isSmallerOrEqual('md'))
-    canvas.value?.setAttribute('width', '500')
+  //   if (breakpoints.isSmallerOrEqual('md'))
+  //     canvas.value?.setAttribute('width', '500')
 
   spline.value = app
 })
@@ -35,7 +35,7 @@ whenever(() => props.win, () => {
 
 <template>
   <div
-    min-h-40 :class="{
+    min-h-30 :class="{
       relative: !loaded,
     }"
   >
