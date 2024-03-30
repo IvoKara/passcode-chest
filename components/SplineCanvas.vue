@@ -23,7 +23,7 @@ onMounted(async () => {
   loaded.value = true
 
   if (breakpoints.isSmallerOrEqual('md'))
-    canvas.value?.setAttribute('width', '400')
+    canvas.value?.setAttribute('width', '500')
 
   spline.value = app
 })
